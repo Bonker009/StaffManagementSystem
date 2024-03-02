@@ -1,13 +1,17 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 public abstract class StaffMember {
     protected int id;
-    private String name;
-    private String address;
+    protected String name;
+    protected String address;
     protected static int staffId = 1;
 
     public StaffMember(String name, String address) {
         this.id = StaffMember.staffId++;
+
         this.name = name;
         this.address = address;
+
     }
     @Override
     public String toString() {
